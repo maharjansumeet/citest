@@ -4,6 +4,5 @@ node_js:
 install: 
   - yarn 
   - yarn build
-deploy:
-  - yarn predeploy
+script:
   - yarn deploy
