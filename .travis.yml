@@ -4,13 +4,14 @@ node_js:
 cache: yarn
 install: 
   - yarn 
-before_deploy:
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: f1d5d8f392b19a26a2c3104adf52d24a1d34d52c
-  github-url: http://msumeetiw.github.io/citest
-  keep-history: true
-  on:
-    branch: master
+script:
+  - yarn predeploy
+  - yarn deploy
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: f1d5d8f392b19a26a2c3104adf52d24a1d34d52c
+#   github-url: http://msumeetiw.github.io/citest
+#   keep-history: true
+#   on:
+#     branch: master
