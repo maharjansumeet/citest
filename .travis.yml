@@ -5,8 +5,10 @@ cache: yarn
 install: 
   - yarn 
 before_script: 
-  - git config credential.helper "store --file=.git/credentials"; echo "https://f1d5d8f392b19a26a2c3104adf52d24a1d34d52c:@github.com" > .git/credentials 2>/dev/null
-  - git config --global user.email msumeetiw@insightworkshop.io && git config --global user.name "msumeetiw"
+  - git config --global user.email "msumeetiw@insightworkshop.io "
+  - git config --global user.name "msumeetiw"
+  - git remote rm origin
+  - git remote add origin https://user:f1d5d8f392b19a26a2c3104adf52d24a1d34d52c@github.com/msumeetiw/citest.git
 script:
   - yarn predeploy
   - yarn deploy
