@@ -4,6 +4,7 @@ node_js:
 cache: yarn
 install: 
   - yarn 
+before_script: git config --global user.email msumeetiw@insightworkshop.io && git config --global user.name "msumeetiw"
 script:
   - yarn predeploy
   - yarn deploy
